@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 1920px;
+  height: 1090px;
+  background-color: #cad3d3;
+  position: relative;
+}
+.box .list-box {
+  width: 1170px;
+  height: 765px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+.list-box .item-box {
+  width: 362px;
+  height: 100%;
+}
+.box .list-box .item-price {
+  width: 100%;
+  height: 272px;
+  position: relative;
+}
+.item-price .item-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.item-price .item-title {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  font-size: 50px;
+  font-family: segoe ui light;
+}
+.item-title .item-title-extra {
+  text-align: center;
+  font-size: 15px;
+}
+.item-price .item-info {
+  position: absolute;
+  top: -60px;
+  left: 121px;
+  z-index: 3;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  padding: 25px 0;
+  border-radius: 50%;
+  font-family: segoe ui light;
+}
+.item-price .item-info-color {
+  background-color: #2c2e3d;
+}
+.item-info .item-info-price {
+  font-size: 35px;
+  text-align: center;
+}
+.item-info .price-ocean {
+  color: #2196f7;
+}
+.item-info .price-mountains {
+  color: #862676;
+}
+.item-info .price-forest {
+  color: #5bbd4b;
+}
+.item-info .item-info-note {
+  font-size: 17px;
+  text-align: center;
+  color: #5f6775;
+}
+.item-price .item-image-new {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 4;
+}
+.item-price .item-new {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  z-index: 5;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: segoe ui light;
+  color: white;
+}
+.item-box .item-list {
+  background-color: white;
+  width: 100%;
+  height: 493px;
+}
+.item-list ul li {
+  list-style: none;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 17px;
+  font-family: segoe ui light;
+}
+.item-list li .item-subtitle {
+  font-size: 25px;
+}
+.item-list li .item-subtitle-details {
+  font-size: 17px;
+}
+li:nth-child(2n) {
+  background-color: #f4f6f7;
+}
+.item-list .item-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+.item-list button {
+  background-color: white;
+  padding: 12px 25px;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: segoe ui light;
+}
+.item-button .item-button-ocean {
+  color: #2196f7;
+  border-color: #2196f7;
+}
+.item-button .item-button-mountains {
+  color: #862676;
+  border-color: #862676;
+}
+.item-button .item-button-forest {
+  color: #5bbd4b;
+  border-color: #5bbd4b;
+}
+.item-button .item-button-ocean:hover {
+  background-color: #2196f7;
+  color: white;
+}
+.item-button .item-button-mountains:hover {
+  background-color: #862676;
+  color: white;
+}
+.item-button .item-button-forest:hover {
+  background-color: #5bbd4b;
+  color: white;
+}
