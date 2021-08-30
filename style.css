@@ -3,27 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
-.box {
-  width: 1920px;
-  height: 1090px;
-  background-color: #cad3d3;
-  position: relative;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.box .list-box {
-  width: 1170px;
-  height: 765px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+ul {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --white-color: white;
+  --blue-color: #2196f7;
+  --green-color: #5bbd4b;
+  --orchid-color: #862676;
+}
+.list-box {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #cad3d3;
 }
-.list-box .item-box {
+
+.item-box {
   width: 362px;
-  height: 100%;
+  margin-right: 30px;
 }
-.box .list-box .item-price {
+/* chon phan tu cuoi cung cua chinh no */
+.item-box:last-of-type {
+  margin-right: 0;
+}
+.list-box .item-price {
   width: 100%;
   height: 272px;
   position: relative;
@@ -37,15 +46,13 @@
   left: 0;
 }
 .item-price .item-title {
-  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: white;
+  color: var(--white-color);
   font-size: 50px;
-  font-family: segoe ui light;
 }
 .item-title .item-title-extra {
   text-align: center;
@@ -57,11 +64,9 @@
   left: 121px;
   z-index: 3;
   width: 120px;
-  height: 120px;
-  background-color: white;
+  background-color: var(--white-color);
   padding: 25px 0;
   border-radius: 50%;
-  font-family: segoe ui light;
 }
 .item-price .item-info-color {
   background-color: #2c2e3d;
@@ -70,14 +75,23 @@
   font-size: 35px;
   text-align: center;
 }
-.item-info .price-ocean {
-  color: #2196f7;
+.price-ocean,
+.item-button-ocean {
+  color: var(--blue-color);
+}
+.price-mountains,
+.item-button-mountains {
+  color: var(--orchid-color);
+}
+.price-forest,
+.item-button-forest {
+  color: var(--green-color);
 }
 .item-info .price-mountains {
-  color: #862676;
+  color: var(--orchid-color);
 }
 .item-info .price-forest {
-  color: #5bbd4b;
+  color: var(--green-color);
 }
 .item-info .item-info-note {
   font-size: 17px;
@@ -97,64 +111,49 @@
   z-index: 5;
   text-transform: uppercase;
   font-size: 17px;
-  font-family: segoe ui light;
-  color: white;
+  color: var(--white-color);
 }
-.item-box .item-list {
-  background-color: white;
+.list-box .item-list {
+  background-color: var(--white-color);
   width: 100%;
-  height: 493px;
 }
-.item-list ul li {
+.item-list li {
   list-style: none;
   text-align: center;
   padding: 15px 0;
   font-size: 17px;
-  font-family: segoe ui light;
 }
-.item-list li .item-subtitle {
+li .item-subtitle {
   font-size: 25px;
 }
-.item-list li .item-subtitle-details {
+li .item-subtitle-details {
   font-size: 17px;
 }
 li:nth-child(2n) {
   background-color: #f4f6f7;
 }
-.item-list .item-button {
+.item-button {
+  background-color: var(--white-color);
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  padding: 45px;
 }
-.item-list button {
-  background-color: white;
+button {
+  background-color: var(--white-color);
   padding: 12px 25px;
   border: 1px solid;
   text-transform: uppercase;
   font-size: 25px;
-  font-family: segoe ui light;
 }
-.item-button .item-button-ocean {
-  color: #2196f7;
-  border-color: #2196f7;
+.item-button-ocean:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
-.item-button .item-button-mountains {
-  color: #862676;
-  border-color: #862676;
+.item-button-mountains:hover {
+  background-color: var(--orchid-color);
+  color: var(--white-color);
 }
-.item-button .item-button-forest {
-  color: #5bbd4b;
-  border-color: #5bbd4b;
-}
-.item-button .item-button-ocean:hover {
-  background-color: #2196f7;
-  color: white;
-}
-.item-button .item-button-mountains:hover {
-  background-color: #862676;
-  color: white;
-}
-.item-button .item-button-forest:hover {
-  background-color: #5bbd4b;
-  color: white;
+.item-button-forest:hover {
+  background-color: var(--green-color);
+  color: var(--white-color);
 }
