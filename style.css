@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body .list-box {
+  display: flex;
+  justify-content: center;
+  background-color: #cad3d3;
+  padding: 100px 0;
+  flex-wrap: wrap;
+}
+
+body .list-box .item-box {
+  width: 362px;
+  margin-right: 30px;
+}
+
+body .list-box .item-box:nth-child(3) {
+  margin-right: 0;
+}
+
+body .list-box .item-box .item-price {
+  width: 100%;
+  height: 272px;
+  position: relative;
+}
+
+body .list-box .item-box .item-price .item-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body .list-box .item-box .item-price .item-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+}
+
+body .list-box .item-box .item-price .item-title .item-title-extra {
+  font-size: 15px;
+  text-align: center;
+}
+
+body .list-box .item-box .item-price .item-info {
+  position: absolute;
+  top: -60px;
+  left: 121px;
+  z-index: 3;
+  width: 120px;
+  padding: 25px 0;
+  border-radius: 50%;
+  background-color: white;
+}
+
+body .list-box .item-box .item-price .item-info .item-info-price {
+  font-size: 35px;
+  text-align: center;
+}
+
+body .list-box .item-box .item-price .item-info .price-ocean {
+  color: #2196f7;
+}
+
+body .list-box .item-box .item-price .item-info .price-mountains {
+  color: #862676;
+}
+
+body .list-box .item-box .item-price .item-info .price-forest {
+  color: #5bbd4b;
+}
+
+body .list-box .item-box .item-price .item-info .item-info-note {
+  font-size: 17px;
+  text-align: center;
+  color: #5f6775;
+}
+
+body .list-box .item-box .item-price .item-info-color {
+  background-color: #282a3f;
+}
+
+body .list-box .item-box .item-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  list-style: none;
+}
+
+body .list-box .item-box .item-list li {
+  font-size: 17px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+body .list-box .item-box .item-list li .item-subtitle {
+  font-size: 25px;
+}
+
+body .list-box .item-box .item-list li .item-subtitle-details {
+  font-size: 17px;
+}
+
+body .list-box .item-box .item-list li:nth-child(2n) {
+  background-color: #f4f6f7;
+}
+
+body .list-box .item-box .item-button {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 45px 45px;
+}
+
+body .list-box .item-box .item-button button {
+  background-color: white;
+  padding: 12px 12px;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+body .list-box .item-box .item-button .item-button-ocean {
+  color: #5bbd4b;
+}
+
+body .list-box .item-box .item-button .item-button-ocean:hover {
+  background-color: #5bbd4b;
+  color: white;
+}
+
+body .list-box .item-box .item-button .item-button-mountains {
+  color: #862676;
+}
+
+body .list-box .item-box .item-button .item-button-mountains:hover {
+  background-color: #862676;
+  color: white;
+}
+
+body .list-box .item-box .item-button .item-button-forest {
+  color: #2196f7;
+}
+
+body .list-box .item-box .item-button .item-button-forest:hover {
+  background-color: #2196f7;
+  color: white;
+}
