@@ -1,26 +1,16 @@
-$white-color: white;
-$blue-color: #2196f7;
-$green-color: #5bbd4b;
-$orchid-color: #862676;
-$gray-color: #cad3d3;
-$grape-color: #282a3f;
-$myFont: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+@import "_variables";
 
-$font-title: 50px;
-$font-item-info: 35px;
-$font-li-sub: 25px;
-$font-li: 17px;
 @mixin layer($top, $left, $sort) {
   position: absolute;
   top: $top;
   left: $left;
   z-index: $sort;
 }
-@mixin equal-info($font) {
+@mixin equalInfo($font) {
   font-size: $font;
   text-align: center;
 }
-@mixin center($background, $padding-top, $padding-left) {
+@mixin divCenter($background, $padding-top, $padding-left) {
   display: flex;
   justify-content: center;
   background-color: $background;
@@ -32,10 +22,10 @@ $font-li: 17px;
   box-sizing: border-box;
 }
 body {
-  font-family: $myFont;
+  font-family: $font-family-base;
 
   .list-box {
-    @include center($gray-color, 100px, 0);
+    @include divCenter($gray-color, 100px, 0);
     flex-wrap: wrap;
     .item-box {
       width: 362px;
@@ -56,9 +46,9 @@ body {
           @include layer(50%, 50%, 2);
           transform: translate(-50%, -50%);
           color: $white-color;
-          font-size: $font-title;
+          font-size: $fs-md-title;
           .item-title-extra {
-            @include equal-info(15px);
+            @include equalInfo(15px);
           }
         }
         .item-info {
@@ -68,7 +58,7 @@ body {
           border-radius: 50%;
           background-color: $white-color;
           .item-info-price {
-            @include equal-info($font-item-info);
+            @include equalInfo($fs-md-item-info);
           }
           .price-ocean {
             color: $blue-color;
@@ -80,7 +70,7 @@ body {
             color: $green-color;
           }
           .item-info-note {
-            @include equal-info($font-li);
+            @include equalInfo($fs-md-li);
             $gray-color: #5f6775;
             color: $gray-color;
           }
@@ -96,13 +86,13 @@ body {
         background-color: $white-color;
         list-style: none;
         li {
-          @include equal-info($font-li);
+          @include equalInfo($fs-md-li);
           padding: 15px 0;
           .item-subtitle {
-            font-size: $font-li-sub;
+            font-size: $fs-md-li-sub;
           }
           .item-subtitle-details {
-            font-size: $font-li;
+            font-size: $fs-md-li;
           }
           &:nth-child(2n) {
             $white-color: #f4f6f7;
@@ -111,13 +101,13 @@ body {
         }
       }
       .item-button {
-        @include center($white-color, 45px, 45px);
+        @include divCenter($white-color, 45px, 45px);
         button {
           background-color: $white-color;
           padding: 12px 12px;
           border: 1px solid;
           text-transform: uppercase;
-          font-size: $font-li-sub;
+          font-size: $fs-md-li-sub;
         }
         .item-button-ocean {
           color: $green-color;
